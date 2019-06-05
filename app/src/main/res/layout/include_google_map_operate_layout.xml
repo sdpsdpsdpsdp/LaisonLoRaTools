@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mb="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_execute"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="12dp"
+        android:layout_marginEnd="12dp" />
+
+    <com.laisontech.laisonloratools.customerview.MapStyleButton
+        android:id="@+id/mb_handle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/iv_execute"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="22dp"
+        mb:flWH="32dp"
+        mb:imageWH="20dp" />
+
+    <com.laisontech.laisonloratools.customerview.MapStyleButton
+        android:id="@+id/mb_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/mb_handle"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="22dp"
+        android:visibility="visible"
+        mb:centerImage="@drawable/icon_dingwei"
+        mb:flWH="32dp"
+        mb:imageWH="20dp" />
+
+    <com.laisontech.laisonloratools.customerview.MapStyleButton
+        android:id="@+id/mb_change_map_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/mb_location"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="22dp"
+        mb:flWH="32dp"
+        mb:imageWH="20dp" />
+
+    <LinearLayout
+        android:id="@+id/ll_visible_map_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/mb_change_map_mode"
+        android:layout_toStartOf="@+id/iv_execute"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/btn_normal_map"
+            android:layout_width="88dp"
+            android:layout_height="55dp"
+            android:background="@drawable/icon_erdiditu" />
+
+        <Button
+            android:id="@+id/btn_satellite_map"
+            android:layout_width="88dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/icon_weixingdutu" />
+
+        <Button
+            android:id="@+id/btn_night_map"
+            android:layout_width="88dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/icon_nightmap" />
+    </LinearLayout>
+</RelativeLayout>
